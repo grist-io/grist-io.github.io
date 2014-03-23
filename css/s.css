@@ -74,3 +74,15 @@ h6{font-size:.83em;margin:2.33em 0}
 body{font-size:18px}
 .down{margin-top:-29px}
 }
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+.splash-container{background-image:url(../img/s2.png);background-size: 320px auto;}    
+.minisplash{background-image:url(../img/s2.png);background-size: 320px auto;}
+.footer{background-image:url(../img/f2.png);background-size: 320px auto;}
+.home-menu.pure-menu-open{background-image:url(../img/m2.png);background-size: 320px auto;}
+}
