@@ -81,8 +81,8 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
-.splash-container{background-image:url(../img/s2.png);background-size: 320px auto;}    
-.minisplash{background-image:url(../img/s2.png);background-size: 320px auto;}
-.footer{background-image:url(../img/f2.png);background-size: 320px auto;}
-.home-menu.pure-menu-open{background-image:url(../img/m2.png);background-size: 320px auto;}
+.splash-container{background-image:url(../img/s2.png);background-size: 64px auto;}    
+.minisplash{background-image:url(../img/s2.png);background-size: 64px auto;}
+.footer{background-image:url(../img/f2.png);background-size: 64px auto;}
+.home-menu.pure-menu-open{background-image:url(../img/m2.png);background-size: 64px auto;}
 }
