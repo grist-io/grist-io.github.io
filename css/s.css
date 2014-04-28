@@ -176,7 +176,7 @@ label {
     color:#fff
 }
 .home-menu {
-    padding:1em;
+    padding:1em 0em 1em 0em;
     text-align:center
 }
 .home-menu.pure-menu-open {
@@ -334,11 +334,13 @@ select {
 }
 .home-menu {
     text-align:left;
-    padding-left:2em
+}
+.home-menu .pure-menu-heading {
+padding-left:3em
 }
 .home-menu ul {
     float:right;
-    padding-right:2em
+    padding-right:3em
 }
 .splash {
     width:50%;
