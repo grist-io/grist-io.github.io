@@ -340,7 +340,8 @@ padding-left:3em
 }
 .home-menu ul {
     float:right;
-    padding-right:3em
+    padding-right:3em;
+    right:1;
 }
 .splash {
     width:50%;
