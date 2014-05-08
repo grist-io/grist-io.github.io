@@ -197,11 +197,14 @@ label {
 }
 .home-menu a {
     color:#635147;
-
+background:none;
+border:0
 }
 .home-menu li a:focus,
 .home-menu li a:hover {
-    color:#fff
+    color:#fff;
+        background:none;
+border:0
 }
 .splash-container {
     background:#D43E30;
