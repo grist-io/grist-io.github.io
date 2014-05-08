@@ -190,19 +190,17 @@ label {
     color:#fff;
     font-size:18px;
     text-transform:none
+    
 }
 .home-menu .pure-menu-selected a {
     color:#fff
 }
 .home-menu a {
     color:#635147;
-    background:0;
-    border:0
+
 }
 .home-menu li a:focus,
 .home-menu li a:hover {
-    background:0;
-    border:0;
     color:#fff
 }
 .splash-container {
