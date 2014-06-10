@@ -36,7 +36,6 @@
 .pull-left {
     float: left
 }
-
 .fa-stack {
     position: relative;
     display: inline-block;
@@ -93,9 +92,9 @@
 url(../fonts/SP.woff) format('woff'),
 url(../fonts/SP.ttf) format('truetype'),
 url(../fonts/SP.svg#sofia_pro_lightregular) format('svg');
-font-weight:400;
-font-style:normal;
-text-rendering:optimizelegibility
+ font-weight:400;
+ font-style:normal;
+ text-rendering:optimizelegibility
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     @font-face{font-family:SP;src:url(../fonts/SP.svg#sofia_pro_lightregular) format('svg')
@@ -106,13 +105,10 @@ html,
 input,
 select,
 textarea {
-    font-family:SP
+    font-family:SP;
 }
-.pure-g,
-.pure-g[class *=pure-u],
-.pure-g-r,
-.pure-g-r[class *=pure-u] {
-    font-family:SP
+.pure-g [class *="pure-u"] {
+    font-family:SP;
 }
 a {
     background:0;
@@ -190,21 +186,20 @@ label {
     color:#fff;
     font-size:18px;
     text-transform:none
-    
 }
 .home-menu .pure-menu-selected a {
     color:#fff
 }
 .home-menu a {
     color:#635147;
-background:none;
-border:0
+    background:none;
+    border:0
 }
 .home-menu li a:focus,
 .home-menu li a:hover {
     color:#fff;
-        background:none;
-border:0
+    background:none;
+    border:0
 }
 .splash-container {
     background:#D43E30;
@@ -224,6 +219,8 @@ border:0
 }
 .minisplash {
     background:#D43E30;
+    height: 7em;
+    
 }
 .splash {
     width:80%;
@@ -238,10 +235,7 @@ border:0
 }
 .splash-head {
     font-size:60px;
-    color:rgba(227,
-    66,
-    52,
-    .8);
+    color:rgba(227,   66,   52,   .8);
     padding:.5em 0;
     line-height:1em
 }
@@ -249,12 +243,17 @@ border:0
     color:#fff
 }
 .content-wrapper {
-    position:absolute;
+    position:relative;
     top:87%;
     width:100%;
-    min-height:12%;
-    z-index:2;
-    background:#fff
+    min-height:13%;
+    z-index:1000;
+    background:#ffffff;        
+}
+
+.content {
+    padding:1em;
+        
 }
 
 .footer {
@@ -263,22 +262,22 @@ border:0
     color:#fff
 }
 .down {
-    height:30px;
-    width:60px;
-    border-radius:60px 60px 0 0;
-    -moz-border-radius:60px 60px 0 0;
-    -webkit-border-radius:60px 60px 0 0;
+    height:5em;
+    width:5em;
+    z-index: -1;
+    border-radius:50% 50% 50% 50%;
+    -moz-border-radius:50% 50% 50% 50%;
+    -webkit-border-radius:50% 50% 50% 50%;
     background:#fff;
     color:#e34234;
     text-align:center;
     margin:auto;
-    margin-top:-17px
+    margin-top: -2em;    
 }
 html,
 body {
     height:100%;
 }
-
 select {
     font-family:'arial',
     'helvetica',
@@ -290,7 +289,6 @@ select {
 .fade {
     opacity:0.5;
 }
-
 .fixedx {
     overflow-x:auto;
     max-width:1080px;
@@ -330,14 +328,12 @@ select {
 }
 @media(min-width:48em){body{font-size:18px}
 
-.content {
-    padding:1em
-}
+
 .home-menu {
     text-align:left;
 }
 .home-menu .pure-menu-heading {
-padding-left:3em
+    padding-left:3em
 }
 .home-menu ul {
     float:right;
@@ -437,11 +433,10 @@ body {
     font-size:12px;
     color:#666
 }
-
 .pickadate-cell .pickadate-active {
-    background-color:#e34234;color:#fff;
+    background-color:#e34234;
+    color:#fff;
 }
-
 .pickadate-cell .pickadate-head {
     border-top:1px solid #DCDCDC;
     background:#f3f3f3
@@ -468,117 +463,130 @@ body {
     text-decoration:none;
     font-size:.9em
 }
-/*! Bootstrap v3.1.1 (http://getbootstrap.com) Copyright 2011-2014 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)*/
+/*slides*/
 
-img {
-    vertical-align:middle
-}
-.img-responsive,
-.carousel-inner>.item>img,
-.carousel-inner>.item>a>img {
-    display:block;
-    max-width:100%;
-    height:auto
-}
-.img-rounded {
-    border-radius:5px
-}
-.carousel {
-    position:relative
-}
-.carousel-inner {
+.s-slides {
     position:relative;
+}
+.s-content {
+    position:relative;
+    padding-top:2em;
+    width:100%;
+    height:100%;
     overflow:hidden;
-    width:100%
 }
-.carousel-inner>.item {
-    display:none;
-    position:relative;
-    -webkit-transition:.6s ease-in-out left;
-    transition:.6s ease-in-out left
-}
-.carousel-inner>.item>img,
-.carousel-inner>.item>a>img {
-    line-height:1
-}
-.carousel-inner>.active,
-.carousel-inner>.next,
-.carousel-inner>.prev {
-    display:block
-}
-.carousel-inner>.active {
-    left:0
-}
-
-.carousel-control {
+.s-slides input {
     position:absolute;
     top:0;
-    left:0;
-    bottom:0;
-    width:15%;
-    font-size:20px;
-    color:#fff;
-    text-align:center;
-    text-shadow:0 1px 2px rgba(0,
-    0,
-    0,
-    0.6)
+    left:49%;
+    right:50%;
+    width:2em;
+    height:2em;
+    z-index:1001;
+    cursor:pointer;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter:alpha(opacity=0);
+    opacity:0;
 }
-.carousel-control.left {}.carousel-control.right {
-    left:auto;
+.s-slides input + label {
+    position:absolute;
+    top:0.3em;
+    left:49.5%;
+    width:1em;
+    height:1em;
+    z-index:1000;
+    border:0.2em solid #f3f3f3;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    -webkit-transition:background-color linear 0.7s;
+    -moz-transition:background-color linear 0.7s;
+    -o-transition:background-color linear 0.7s;
+    -ms-transition:background-color linear 0.7s;
+    transition:background-color linear 0.7s;
+}
+.s-slides input:checked + label {
+    background-color:#ccc;
+}
+.s-selector-1,
+.button-label-1 {
+    margin-left:-2em;
+}
+.s-selector-2,
+.button-label-2 {
+    margin-left:0em;
+}
+.s-selector-3,
+.button-label-3 {
+    margin-left:2em;
+}
+.s-selector-4,
+.button-label-4 {
+    margin-left:4em;
+}
+.s-selector-5,
+.button-label-5 {
+    margin-left:4em;
+}
+.s-arrow {
+    position:absolute;
+    top:13%;
+    width:25%;
+    height:87%;
+    display:none;
+    cursor:pointer;
+    z-index:1000;
+    background:transparent;
+}
+.s-left {} .s-right {} .s-arrow:hover {
+    opacity:1;
+}
+.s-arrow:active {} .s-selector-1:checked ~ .s-arrow.s-a2,
+.s-selector-2:checked ~ .s-arrow.s-a3,
+.s-selector-3:checked ~ .s-arrow.s-a4,
+.s-selector-4:checked ~ .s-arrow.s-a5 {
     right:0;
+    display:block;
+    background-position:top right;
 }
-.carousel-control:hover,
-.carousel-control:focus {
-    outline:none;
-    color:#e34234;
-    text-decoration:none;
+.s-selector-2:checked ~ .s-arrow.s-a1,
+.s-selector-3:checked ~ .s-arrow.s-a2,
+.s-selector-4:checked ~ .s-arrow.s-a3,
+.s-selector-5:checked ~ .s-arrow.s-a4 {
+    left:0;
+    display:block;
+    background-position:top left;
 }
-
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-    position:absolute;
-    top:50%;
-    z-index:5;
-    display:inline-block
+.s-slider {
+    position:relative;
+    left:0;
+    width:300%;
+    list-style:none;
+    margin:0;
+    padding:0;
+    -webkit-transition:left ease-in 0.7s;
+    -moz-transition:left ease-in 0.7s;
+    -o-transition:left ease-in 0.7s;
+    -ms-transition:left ease-in 0.7s;
+    transition:left ease-in 0.7s;
 }
-
-.carousel-control .glyphicon-chevron-left {
-    left:50%
-}
-
-.carousel-control .glyphicon-chevron-right {
-    right:50%
-}
-
-.carousel-caption {
-    position:absolute;
-    left:15%;
-    right:15%;
-    top:5%;
-    z-index:10;
-    color:#635147;
+.s-slider > li {
+    width:33.333333333333%;
+    float:left;
     text-align:center;
-    background-color:#fff;
-    box-shadow:0 1px 2px rgba(0,
-    0,
-    0,
-    0.6)
 }
-@media screen and (min-width: 48em) {
-    .carousel-caption {
-        top:40%;
-    }
+input.s-selector-1:checked ~ .s-content .s-slider {
+    left:0;
 }
-@media screen and (min-width: 78em) {
-    .carousel-control .glyphicon-chevron-left,
-    .carousel-control .glyphicon-chevron-right,
-    .carousel-control .icon-prev,
-    .carousel-control .icon-next {
-        width:30px;
-        height:30px;
-        margin-top:-15px;
-        margin-left:-15px;
-        font-size:50px
-    }
+input.s-selector-2:checked ~ .s-content .s-slider {
+    left:-100%;
+}
+input.s-selector-3:checked ~ .s-content .s-slider {
+    left:-200%;
+}
+input.s-selector-4:checked ~ .s-content .s-slider {
+    left:-300%;
+}
+input.s-selector-5:checked ~ .s-content .s-slider {
+    left:-400%;
 }
