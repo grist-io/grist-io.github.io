@@ -14,8 +14,8 @@
 </head>
 
 <body ng-controller="AppCtrl" class="ng-cloak">
-<nav class="ng-cloak">
-        <div class="nav" ng-class="{open: n}">
+<nav>
+        <div class="nav" ng-class="{open: n, in: n}">
             <a class="nav-heading" href ng-click="n = !n" title="Grist.io"><img src="img/i.png" class="imgl"/>&nbsp; Grist.io</a>
             <div ng-show="n">
             <ul>

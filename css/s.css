@@ -214,7 +214,7 @@ striping:
     top: 0;
     z-index: 1
 }
-.open {height: 100%}
+.open {height: 100%;}
 .drop {position: absolute; bottom: 0}
 .nav>ul:focus {outline: 0}
 .nav li {   position: relative}
@@ -292,11 +292,11 @@ a:active, a:hover { color:#8a3324}
 .ctr{text-align: center;}
 .l{text-decoration: none; margin-right: 1.2em;}
 .hook{position: absolute; top 0;}
-header {background:#eee;z-index:1;overflow:hidden;width:100%;height:90%;text-align: center; top:0;left:0;position:fixed!important}
-.title{padding-top: 1em; color:#e34234; font-size: 4em;}
+header {background:#606060;z-index:1;overflow:hidden;width:100%;height:90%;text-align: center; top:0;left:0;position:fixed!important}
+.title{padding-top: 1em; color:#eee; font-size: 4em;}
 .after {position:absolute;top:90%;width:100%;min-height:10%;z-index:2;background:#fff;}
 .rnd{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;border: 0.5em solid #eee;box-shadow: 0 0 0.7em #ccc;}
-.band{background:#eee;}
+.band{background:#606060;}
 section{max-width:960px;margin: 0 auto}
 footer{background:#eee;text-align: center;}
 
@@ -304,4 +304,26 @@ footer{background:#eee;text-align: center;}
 select{font-family:SP,FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;}.lgray{background-color:#eee}.fade{opacity:.5}.wide{width:100%}.lbl{padding:1px;background:#635147;color:#fff;border-radius:5%}.gr1{color:rgba(175,155,143,.5)}.gr2{color:rgba(99,81,71,.5)}.b1{color:rgba(91,175,173,.5)}.b2{color:rgba(78,149,148,.5)}
 
 /*! animations todo */
+    .out {
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation: Right .5s both ease-in;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: Right .5s both ease-in;
+	transform-origin: 50% 50%;
+	animation: Right .5s both ease-in; 	}
+	.in {
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation: Left .5s both ease-out;
+	-moz-transform-origin: 50% 50%;
+	-moz-animation: Left .5s both ease-out;
+	transform-origin: 50% 50%;
+	animation: Left .5s both ease-out;	}
+
+@-webkit-keyframes Right {to { -webkit-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }}
+@-moz-keyframes Right {to { -moz-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }}
+@keyframes Right {to { transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }}
+
+@-webkit-keyframes Left {from { -webkit-transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }}
+@-moz-keyframes Left {from { -moz-transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }}
+@keyframes Left {from { transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }}
 
